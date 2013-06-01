@@ -1,0 +1,27 @@
+<ul>
+  <% if ::Refinery::Superinquiries::Admin::SuperinquiriesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.superinquiries_admin_superinquiries_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_superinquiries_admin_superinquiry_path,
+                 :class => "add_icon" %>
+  </li>
+
+</ul>
+
+<div class='superinquiries_container'>
+  <% if @superinquiries.any? %>
+  <table class="record_table">
+    <%= render 'superinquiries' %>
+  </table>
+  <% else %>
+    <p>
+        <strong>
+          <%= t('.no_items_yet') %>
+        </strong>
+    </p>
+  <% end %>
+</div>
+

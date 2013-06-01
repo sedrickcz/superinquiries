@@ -1,0 +1,14 @@
+<% content_for :body_content_title do %>
+  <%= @superinquiry.title %>
+<% end %>
+
+<% content_for :body do %>
+  <%= superinquiry_form(@superinquiry.title)%>
+<% end %>
+
+<% content_for :side_body do %>
+
+
+<% end %>
+
+<%= render '/refinery/content_page' %>

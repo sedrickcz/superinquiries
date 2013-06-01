@@ -1,0 +1,27 @@
+sk:
+  refinery:
+    plugins:
+      superinquiries:
+        title: Superinquiries
+    superinquiries:
+      admin:
+        superinquiries:
+          actions:
+            create_new: Pridať Superinquiry
+            reorder: Preusporiadať Superinquiries
+            reorder_done: Koniec radenia Superinquiries
+          records:
+            title: Superinquiries
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Superinquiries. Kliknite na "Pridať Superinquiry" pre pridanie prvého superinquiry.
+          superinquiry:
+            view_live_html: Zobraziť náhľad superinquiry<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť superinquiry
+            delete: Zmazať superinquiry
+      superinquiries:
+        show:
+          other: Daľšie Superinquiries
+  activerecord:
+    attributes:
+      'refinery/superinquiries/superinquiry':
+        title: Title

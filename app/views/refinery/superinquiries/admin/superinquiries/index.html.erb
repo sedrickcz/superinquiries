@@ -1,0 +1,20 @@
+<section id='tag_categories'>
+  <h2>Druhy formulářů: </h2>
+  <%= link_to "Vše", refinery.superinquiries_admin_superinquiries_path%> |
+  <% @superinquiries.each do |superinquiry| %>
+    <% if params[:superinquiry].to_s == superinquiry.id.to_s %>
+    <strong><%= link_to superinquiry.title.humanize, refinery.superinquiries_admin_superinquiries_path(superinquiry: superinquiry.id)%></strong>
+    <% else %>
+      <%= link_to superinquiry.title.humanize, refinery.superinquiries_admin_superinquiries_path(superinquiry: superinquiry.id)%>
+    <% end -%> |
+  <% end if @superinquiries-%>
+  <%= link_to "Spam (#{@spam})", refinery.superinquiries_admin_superinquiries_path(spam: 1)%> |
+</section>
+<br>
+<section id='records'>
+  <%= render 'records' %>
+</section>
+<aside id='actions'>
+  <%= render 'actions' %>
+</aside>
+<%= render '/refinery/admin/make_sortable', :tree => false if !searching? and ::Refinery::Superinquiries::Admin::SuperinquiriesController.sortable? and ::Refinery::Superinquiries::Superinquiry.count > 1 %>

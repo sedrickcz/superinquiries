@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <td>Datum:</td><td><%=l(@inbox.created_at, format: "%d. %B %Y %H:%M")%></td>
+  </tr>
+
+<%@inbox.inboxes_items.each do |item| %>
+  <%input = Refinery::Superinquiries::SuperForm::SUPERFORMS[item.input_name.to_sym]%>
+  <% unless input.name == "validity" %>
+    <tr>
+      <td><%= input.title%></td><td> <%= item.value%></td>
+    </tr>
+  <% end -%>
+<% end -%>
+</table>

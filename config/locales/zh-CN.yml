@@ -1,0 +1,29 @@
+zh-CN:
+  refinery:
+    plugins:
+      superinquiries:
+        title: Superinquiries
+    superinquiries:
+      admin:
+        superinquiries:
+          actions:
+            create_new: 建立新的 Superinquiry
+            reorder: 对 Superinquiries 重新排序
+            reorder_done: 对 Superinquiries 的重新排序结束
+          records:
+            title: Superinquiries
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Superinquiries yet. Click "Add New Superinquiry" to add your first superinquiry.
+            no_items_yet: 目前没有 Superinquiries . 点击 "Add New Superinquiry" 创建一个superinquiry.
+          superinquiry:
+            view_live_html: 查看 superinquiry 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 superinquiry
+            delete: 永久删除 superinquiry
+      superinquiries:
+        show:
+          other: 其他 Superinquiries
+  activerecord:
+    attributes:
+      'refinery/superinquiries/superinquiry':
+        title: Title

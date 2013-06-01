@@ -1,0 +1,45 @@
+<tr class='<%= cycle("even", "odd") %>'>
+  <td>
+    <%= raw "<i>#{l(inbox.created_at, format: '%d. %B %Y %H:%M')}</i> Příchozí #{inbox.superinquiry.title} id: #{inbox.id}"%>
+
+  </td>
+  <td>
+    <% unless inbox.checked == 1 %>
+    <%= link_to(raw('<img src="/assets/refinery/checkbox_unchecked.png" style="width:16px;" alt="Nevyřízeno" />'),
+           refinery.superinquiries_admin_superinquiries_inbox_check_path(inbox.id),
+              { :confirm => t('orders.confirm'),
+                :title => t('orders.check')})  -%>
+    <% else %>
+      <%= link_to(raw('<img src="/assets/refinery/checkbox_checked.png" style="width:16px;" alt="Vyřízeno" />'),
+      refinery.superinquiries_admin_superinquiries_inbox_check_path(inbox.id),
+        { :confirm => t('orders.uncheck_confirm'),
+         :title => t('orders.uncheck')})  %>
+    <% end %>
+  </td>
+  <td>
+    <% unless inbox.spam == true%>
+    <%= link_to(raw('<img src="/assets/refinery/checkbox_unchecked.png" style="width:16px;" alt="Není spam" />'),
+           refinery.superinquiries_admin_superinquiries_inbox_spam_path(inbox.id),
+              { :confirm => 'Opravdu chcete položku označit jako Spam?',
+                :title => 'Označit jako Spam'}) -%>
+    <% else %>
+      <%= link_to(raw('<img src="/assets/refinery/checkbox_checked.png" style="width:16px;" alt="Spam" />'),
+      refinery.superinquiries_admin_superinquiries_inbox_spam_path(inbox.id),
+        { :confirm => 'Opravdu chcete položku označit, že není Spam?',
+         :title => 'Není Spam'})  %>
+    <% end %>
+  </td>
+  <td>
+    
+    <%= link_to refinery_icon_tag("application_go.png"), refinery.superinquiries_admin_superinquiries_inbox_path(inbox.id),
+        :title => t('.view_live_html') %>
+   </td> 
+<td>
+    <%= link_to refinery_icon_tag("delete.png"), refinery.superinquiries_admin_superinquiries_inbox_path(inbox.id),
+        :class => "cancel confirm-delete",
+        :title => t('.delete'),
+        :confirm => t('message', :scope => 'refinery.admin.delete', :title => inbox.id),
+        :method => :delete %>
+  </td>
+  
+</tr>

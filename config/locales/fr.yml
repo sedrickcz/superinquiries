@@ -1,0 +1,27 @@
+fr:
+  refinery:
+    plugins:
+      superinquiries:
+        title: Superinquiries
+    superinquiries:
+      admin:
+        superinquiries:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Superinquiry
+            reorder: Réordonner les Superinquiries
+            reorder_done: Fin de réordonnancement des Superinquiries
+          records:
+            title: Superinquiries
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Superinquiry. Cliquer sur "Créer un(e) nouve(au/l/lle) Superinquiry" pour créer votre premi(er/ère) superinquiry.'
+          superinquiry:
+            view_live_html: Voir ce(t/tte) superinquiry <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) superinquiry
+            delete: Supprimer définitivement ce(t/tte) superinquiry
+      superinquiries:
+        show:
+          other: Autres Superinquiries
+  activerecord:
+    attributes:
+      'refinery/superinquiries/superinquiry':
+        title: Title

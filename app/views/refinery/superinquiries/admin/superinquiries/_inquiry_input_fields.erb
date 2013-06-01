@@ -1,0 +1,9 @@
+<div class="fieldset clearfix fields">
+  <div class='field'>
+    <%= f.hidden_field :_destroy, class: "remove_img" %>
+    <%= f.label :superform_id, "Formulář" -%>
+    <%= f.select :superform_id, options_for_select(Refinery::Superinquiries::SuperForm.options_for_select.collect{|a| ["#{a[:title]} <#{a[:form_type]}>",a[:id]]},f.object.superform_id)  -%>
+    <%= f.check_box :required %> Povinný
+    <%= link_to_function "odstranit formulářové pole", "remove_fields(this)",:class=>'right' %>
+  </div>
+</div>

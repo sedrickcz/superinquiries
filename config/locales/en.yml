@@ -1,0 +1,27 @@
+en:
+  refinery:
+    plugins:
+      superinquiries:
+        title: Superinquiries
+    superinquiries:
+      admin:
+        superinquiries:
+          actions:
+            create_new: Add New Superinquiry
+            reorder: Reorder Superinquiries
+            reorder_done: Done Reordering Superinquiries
+          records:
+            title: Superinquiries
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Superinquiries yet. Click "Add New Superinquiry" to add your first superinquiry.
+          superinquiry:
+            view_live_html: View this superinquiry live <br/><em>(opens in a new window)</em>
+            edit: Edit this superinquiry
+            delete: Remove this superinquiry forever
+      superinquiries:
+        show:
+          other: Other Superinquiries
+  activerecord:
+    attributes:
+      'refinery/superinquiries/superinquiry':
+        title: Title

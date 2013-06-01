@@ -1,0 +1,28 @@
+es:
+  refinery:
+    plugins:
+      superinquiries:
+        title: Superinquiries
+#        article: masculino/femenino
+    superinquiries:
+      admin:
+        superinquiries:
+          actions:
+            create_new: Crear nuevo superinquiry
+            reorder: Reordenar superinquiries
+            reorder_done: Reordenación de superinquiries completada
+          records:
+            title: Superinquiries
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay superinquiries todavía. Pulsa en "Crear nuevo Superinquiry" para crear tu primer superinquiry.
+          superinquiry:
+            view_live_html: Ver este superinquiry como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este superinquiry
+            delete: Borrar este superinquiry para siempre
+      superinquiries:
+        show:
+          other: Otros superinquiries
+  activerecord:
+    attributes:
+      'refinery/superinquiries/superinquiry':
+        title: Title

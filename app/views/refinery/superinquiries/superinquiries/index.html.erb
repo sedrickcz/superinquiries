@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="superinquiries">
+    <% @superinquiries.each do |superinquiry| %>
+      <li>
+        <%= link_to superinquiry.title, refinery.superinquiries_superinquiry_path(superinquiry) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

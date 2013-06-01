@@ -1,0 +1,27 @@
+nl:
+  refinery:
+    plugins:
+      superinquiries:
+        title: Superinquiries
+    superinquiries:
+      admin:
+        superinquiries:
+          actions:
+            create_new: Maak een nieuwe Superinquiry
+            reorder: Wijzig de volgorde van de Superinquiries
+            reorder_done: Klaar met het wijzingen van de volgorde van de Superinquiries
+          records:
+            title: Superinquiries
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Superinquiries. Druk op 'Maak een nieuwe Superinquiry' om de eerste aan te maken.
+          superinquiry:
+            view_live_html: Bekijk deze superinquiry op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze superinquiry
+            delete: Verwijder deze superinquiry voor eeuwig
+      superinquiries:
+        show:
+          other: Andere Superinquiries
+  activerecord:
+    attributes:
+      'refinery/superinquiries/superinquiry':
+        title: Title
